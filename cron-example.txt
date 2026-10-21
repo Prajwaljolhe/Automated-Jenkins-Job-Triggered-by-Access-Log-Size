@@ -1,0 +1,8 @@
+# Cron configuration for the access log monitoring script
+# Checks the Apache access log every 5 minutes and triggers the
+# Jenkins job (log-upload-to-s3) when it exceeds the configured threshold.
+#
+# Install with: sudo crontab -e
+# Verify with:  sudo crontab -l
+
+*/5 * * * * /usr/local/bin/monitor_access_log.sh
